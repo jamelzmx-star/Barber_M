@@ -1,0 +1,117 @@
+/* MyAppointmentsPage.css */
+.my-appointments-page { padding: 3rem 0; background: linear-gradient(to bottom, var(--blanco-puro), var(--light)); }
+.search-input-group { display: flex; gap: 1rem; }
+.search-input { flex: 1; }
+.appointments-list { display: grid; gap: 1.5rem; }
+.appointment-card { background: var(--blanco-puro); border-radius: 16px; padding: 1.5rem; box-shadow: var(--shadow-md); border-left: 4px solid; }
+.appointment-card.status-pending { border-left-color: var(--coral-energetic); }
+.appointment-card.status-confirmed { border-left-color: var(--turquesa-tech); }
+.appointment-card.status-rejected { border-left-color: var(--naranja-fuego); }
+.appointment-card.status-completed { border-left-color: var(--verde-circuito); }
+.status-badge { padding: 0.4rem 1rem; border-radius: 20px; color: var(--blanco-puro); font-weight: 600; }
+.info-row { display: flex; align-items: flex-start; gap: 1rem; }
+.info-icon { font-size: 1.5rem; }
+.empty-results { text-align: center; padding: 4rem 2rem; background: var(--blanco-puro); border-radius: 16px; }
+.empty-icon { font-size: 4rem; opacity: 0.5; }
+
+
+/* Estilos adicionales para MyAppointmentsPage.css */
+/* AGREGA ESTO AL FINAL de tu archivo MyAppointmentsPage.css existente */
+
+.spinner-small {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top: 2px solid var(--blanco-puro);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  margin-right: 0.5rem;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.search-status {
+  text-align: center;
+  color: var(--turquesa-tech);
+  font-weight: 600;
+  margin-top: 1rem;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+.empty-hints {
+  background: var(--light);
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin: 1.5rem 0;
+}
+
+.empty-hint {
+  color: var(--gris-tech);
+  font-size: 0.95rem;
+  margin: 0.5rem 0;
+  padding-left: 0.5rem;
+}
+
+.search-tips {
+  background: linear-gradient(135deg, var(--turquesa-tech), var(--verde-circuito));
+  color: var(--blanco-puro);
+  padding: 2rem;
+  border-radius: 16px;
+  margin-top: 2rem;
+}
+
+.search-tips h4 {
+  color: var(--blanco-puro);
+  margin-bottom: 1rem;
+}
+
+.search-tips ul {
+  margin: 0;
+  padding-left: 1.5rem;
+}
+
+.search-tips li {
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+.mt-3 {
+  margin-top: 1.5rem;
+}
+
+/* Mejoras de loading */
+.search-form.loading {
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Animación de aparición */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.appointment-card {
+  animation: fadeIn 0.3s ease-out;
+}
+
+.appointment-card:nth-child(1) { animation-delay: 0.1s; }
+.appointment-card:nth-child(2) { animation-delay: 0.2s; }
+.appointment-card:nth-child(3) { animation-delay: 0.3s; }
+.appointment-card:nth-child(4) { animation-delay: 0.4s; }
+.appointment-card:nth-child(5) { animation-delay: 0.5s; }
